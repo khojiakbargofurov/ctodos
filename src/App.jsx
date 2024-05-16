@@ -46,7 +46,7 @@ function App() {
         <ul className="grid grid-cols-4 gap-4">
           {todos.map((item) => {
             return (
-              <li key={item.id} style={{opacity: item.completed ? "0.5" : "1"}}>
+              <li  key={item.id} style={{opacity: item.completed ? "0.5" : "1"}}>
                 <h4>{item.text}</h4>
                 <button className="btn btn-secondary" onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
                 <button className="btn btn-" onClick={() => dispatch(changeStateTodo(item.id))}>Done</button>
