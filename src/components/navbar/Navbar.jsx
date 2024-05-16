@@ -1,6 +1,6 @@
 function Navbar() {
   return ( 
-    <div className="font-mono sm:px-10 lg:px-48 py-5 navbar bg-base-100 items-center">
+    <div className="sticky bg-white relative top-0 font-mono sm:px-10 lg:px-48 py-5 navbar bg-base-100 items-center">
       <div className="flex-1">
         <a href="/" className="sm:text-2xl md:text-3xl font-bold">CTodos</a>
       </div>
