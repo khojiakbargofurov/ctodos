@@ -50,10 +50,10 @@ function App() {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {todos.map((item) => (
             <li className=" flex flex-col gap-4 border rounded-xl p-5" key={item.id} style={{ opacity: item.completed ? "0.5" : "1" }}>
-              <h4>{item.text}</h4>
+              <h4 className="font-bold text-xl">{item.text}</h4>
               <div className="flex gap-2">
-                <button className="btn btn-secondary" onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
-                <button className="btn btn-primary" onClick={() => dispatch(changeStateTodo(item.id))}>Done</button>
+                <button className="btn btn-secondary px-8" onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
+                <button className="btn btn-primary px-8" onClick={() => dispatch(changeStateTodo(item.id))}>Done</button>
               </div>
             </li>
           ))}
