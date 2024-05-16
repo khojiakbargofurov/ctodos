@@ -47,9 +47,9 @@ function App() {
             <button className="btn px-20" type="submit">Submit</button>
           </form>
         </div>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {todos.map((item) => (
-            <li className=" flex flex-col gap-4 border p-5" key={item.id} style={{ opacity: item.completed ? "0.5" : "1" }}>
+            <li className=" flex flex-col gap-4 border rounded p-5" key={item.id} style={{ opacity: item.completed ? "0.5" : "1" }}>
               <h4>{item.text}</h4>
               <div className="flex gap-2">
                 <button className="btn btn-secondary" onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
