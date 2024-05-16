@@ -43,13 +43,13 @@ function App() {
             <button className="btn px-20">Submit</button>
           </form>
         </div>
-        <ul>
+        <ul className="grid grid-cols-4 gap-4">
           {todos.map((item) => {
             return (
-              <li key={item.id}>
+              <li key={item.id} style={{opacity: item.completed ? "0.5" : "1"}}>
                 <h4>{item.text}</h4>
-                <button onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
-                <button onClick={() => dispatch()}>Done</button>
+                <button className="btn btn-secondary" onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
+                <button className="btn btn-" onClick={() => dispatch(changeStateTodo(item.id))}>Done</button>
               </li>
             );
           })}
