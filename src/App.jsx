@@ -32,8 +32,8 @@ function App() {
     <div className="min-h-screen flex flex-col gap-5">
       <Navbar />
       <div className="flex-grow md:px-48 flex items-center flex-col gap-10">
-        <div className="border p-4 flex inline-block">
-          <form className="flex flex-col items-center gap-4" onSubmit={handleSubmit}>
+        <div className="border p-8 flex inline-block rounded-xl">
+          <form className="flex flex-col items-center gap-6" onSubmit={handleSubmit}>
             <label className="flex flex-col gap-4">
               <h3 className="font-bold">Create Todo</h3>
               <input
@@ -49,7 +49,7 @@ function App() {
         </div>
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {todos.map((item) => (
-            <li className=" flex flex-col gap-4 border rounded p-5" key={item.id} style={{ opacity: item.completed ? "0.5" : "1" }}>
+            <li className=" flex flex-col gap-4 border rounded-xl p-5" key={item.id} style={{ opacity: item.completed ? "0.5" : "1" }}>
               <h4>{item.text}</h4>
               <div className="flex gap-2">
                 <button className="btn btn-secondary" onClick={() => dispatch(removeTodo(item.id))}>Delete</button>
